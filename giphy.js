@@ -30,7 +30,10 @@ function displayMovieInfo() {
       animalImage.attr("data-still", results[i].images.fixed_height_still.url);
       animalImage.attr("data-animate", results[i].images.fixed_height.url);
      // animalImage.attr("class", "gif");
-
+       if (i === results.length - 1)
+       {
+           animalDiv.append("<h2><strong>Click on the Gifs! </strong></h2><br>");
+       }
       // Appending the paragraph and image tag to the animalDiv
       animalDiv.append(animalImage);
 
